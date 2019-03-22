@@ -1,39 +1,21 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-// import Header from '../components/Header';
-// import ExpenseDashboardPage from '../components/ExpenseDashboardPage';
-// import AddExpensePage from '../components/AddExpensePage';
-// import EditExpensePage from '../components/EditExpensePage';
-// import HelpPage from '../components/HelpPage';
-// import NotFoundPage from '../components/NotFoundPage';
+import Header from "./components/Header";
 import Home from "./screens/Home";
+import Portfolio from "./screens/Portfolio";
+import Contact from "./screens/Contact";
+import About from "./screens/About";
 import NotFound from "./screens/NotFound";
-
-// const App = () => (
-//   <BrowserRouter>
-//     <div>
-//       <Header />
-//       <Switch>
-//         <Route
-//           path="/"
-//           component={ExpenseDashboardPage}
-//           exact
-//         />
-//         <Route path="/create" component={AddExpensePage} />
-//         <Route path="/edit/:id" component={EditExpensePage} />
-//         <Route path="/help" component={HelpPage} />
-//         <Route component={NotFoundPage} />
-//       </Switch>
-//     </div>
-//   </BrowserRouter>
-// );
 
 const App = () => (
   <BrowserRouter>
     <div>
+      <Header />
       <Switch>
         <Route path="/" component={Home} exact />
+        <Route path="/portfolio" component={Portfolio} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/about" component={About} />
         <Route component={NotFound} />
       </Switch>
     </div>
