@@ -43,7 +43,7 @@ const About = () => (
       or via the form below and we can discuss the details.
     </p>
     <hr />
-    <h2 className="display-4 text-center">Contact</h2>
+    <h2 className="display-4 text-center mb-4">Contact</h2>
     <ContactForm />
   </Container>
 );

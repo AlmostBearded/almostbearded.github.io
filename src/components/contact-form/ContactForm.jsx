@@ -1,6 +1,7 @@
 import React from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
+import Col from "react-bootstrap/Col";
 
 const ContactForm = () => {
   return (
@@ -8,18 +9,20 @@ const ContactForm = () => {
       action="https://formspree.io/thealmostbearded@gmail.com"
       method="POST"
     >
-      <Form.Group controlId="contactName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control placeholder="Your name" name="name" />
-      </Form.Group>
-      <Form.Group controlId="contactEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          placeholder="Your email address"
-          name="email"
-        />
-      </Form.Group>
+      <Form.Row>
+        <Form.Group as={Col} md={6} controlId="contactName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control placeholder="Your name" name="name" />
+        </Form.Group>
+        <Form.Group as={Col} md={6} controlId="contactEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            placeholder="Your email address"
+            name="email"
+          />
+        </Form.Group>
+      </Form.Row>
       <Form.Group controlId="contactMessage">
         <Form.Label>Message</Form.Label>
         <Form.Control
