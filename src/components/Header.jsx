@@ -20,6 +20,9 @@ const Header = () => (
         </Navbar.Brand>
       </LinkContainer>
       <Nav className="ml-auto">
+        <LinkContainer to="/blog">
+          <Nav.Link>Blog</Nav.Link>
+        </LinkContainer>
         <LinkContainer to="/portfolio">
           <Nav.Link>Portfolio</Nav.Link>
         </LinkContainer>
