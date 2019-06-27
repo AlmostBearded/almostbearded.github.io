@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import ContactForm from "../components/contact-form/ContactForm";
 import peter from "../assets/images/peter.webp";
 
 const About = () => (
@@ -41,9 +42,9 @@ const About = () => (
       <a href="mailto:thealmostbearded@gmail.com">thealmostbearded@gmail.com</a>{" "}
       or via the form below and we can discuss the details.
     </p>
-
-    {/*
-     */}
+    <hr />
+    <h2 className="display-4 text-center">Contact</h2>
+    <ContactForm />
   </Container>
 );
 
