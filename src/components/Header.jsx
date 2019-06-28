@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import logo from "../assets/images/logo.png";
 import { LinkContainer } from "react-router-bootstrap";
 
 const Header = () => (
@@ -10,10 +11,11 @@ const Header = () => (
       <LinkContainer to="/">
         <Navbar.Brand>
           <img
-            alt=""
-            src="/logo.ico"
-            width="30"
-            height="30"
+            alt="Logo"
+            src={logo}
+            width="34"
+            height="34"
+            style={{ imageRendering: "pixelated" }}
             className="d-inline-block align-top"
           />
           {" AlmostBearded"}
