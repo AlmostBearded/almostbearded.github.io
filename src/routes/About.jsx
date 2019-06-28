@@ -1,10 +1,18 @@
 import React from "react";
 import Container from "react-bootstrap/Container";
+import Helmet from "react-helmet";
 import ContactForm from "../components/contact-form/ContactForm";
 import peter from "../assets/images/peter.webp";
 
 const About = () => (
   <Container>
+    <Helmet>
+      <title>About AlmostBearded</title>
+      <meta
+        name="description"
+        content="Details about Peter Oberrauner, his work, his background and how you can get in contact with him."
+      />
+    </Helmet>
     <h1 className="display-1 text-center">About Me</h1>
     <hr className="mt-3 mb-4" />
     <img
