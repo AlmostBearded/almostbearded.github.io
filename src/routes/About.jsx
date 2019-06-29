@@ -107,7 +107,7 @@ const About = () => {
 
       <hr className="my-4" />
       <h2 className="display-4 text-center mb-4">Contact</h2>
-      <Container>
+      <Container className="mb-5">
         <ContactForm />
       </Container>
     </Container>
