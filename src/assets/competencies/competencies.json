@@ -1,0 +1,49 @@
+[
+  {
+    "name": "Game Development",
+    "competencies": [
+      { "name": "Unity", "level": 5 },
+      { "name": "Unreal Engine", "level": 3 },
+      { "name": "Godot", "level": 4 },
+      { "name": "MonoGame", "level": 3 },
+      { "name": "Pico-8", "level": 3 },
+      { "name": "Heaps.io", "level": 2 }
+    ]
+  },
+  {
+    "name": "Web Development",
+    "competencies": [
+      { "name": "React", "level": 4 },
+      { "name": "AngularJS", "level": 2 },
+      { "name": "Jest", "level": 3 },
+      { "name": "Node.js", "level": 2 },
+      { "name": "Express", "level": 2 },
+      { "name": "CSS", "level": 4 },
+      { "name": "Sass", "level": 3 },
+      { "name": "Bootstrap", "level": 4 }
+    ]
+  },
+  {
+    "name": "Programming Languages",
+    "competencies": [
+      { "name": "C++", "level": 4 },
+      { "name": "C#", "level": 4 },
+      { "name": "JavaScript", "level": 4 },
+      { "name": "Rust", "level": 2 },
+      { "name": "Haxe", "level": 2 },
+      { "name": "Python", "level": 2 },
+      { "name": "Java", "level": 3 },
+      { "name": "Lua", "level": 2 }
+    ]
+  },
+  {
+    "name": "Others",
+    "competencies": [
+      { "name": "Git", "level": 5 },
+      { "name": "Subversion", "level": 3 },
+      { "name": "Software Architecture", "level": 4 },
+      { "name": "Design Patterns", "level": 4 },
+      { "name": "Live Streaming", "level": 3 }
+    ]
+  }
+]
