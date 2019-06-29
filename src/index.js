@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./style.scss";
 import Root from "./routes/Root";
 import * as serviceWorker from "./serviceWorker";
 
