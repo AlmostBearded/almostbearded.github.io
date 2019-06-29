@@ -7,7 +7,8 @@
       { "name": "Godot", "level": 4 },
       { "name": "MonoGame", "level": 3 },
       { "name": "Pico-8", "level": 3 },
-      { "name": "Heaps.io", "level": 2 }
+      { "name": "Heaps.io", "level": 2 },
+      { "name": "Game Design", "level": 3 }
     ]
   },
   {
@@ -26,14 +27,15 @@
   {
     "name": "Programming Languages",
     "competencies": [
-      { "name": "C++", "level": 4 },
+      { "name": "C/C++", "level": 4 },
       { "name": "C#", "level": 4 },
       { "name": "JavaScript", "level": 4 },
       { "name": "Rust", "level": 2 },
       { "name": "Haxe", "level": 2 },
       { "name": "Python", "level": 2 },
       { "name": "Java", "level": 3 },
-      { "name": "Lua", "level": 2 }
+      { "name": "Lua", "level": 2 },
+      { "name": "PHP", "level": 2 }
     ]
   },
   {
@@ -43,6 +45,8 @@
       { "name": "Subversion", "level": 3 },
       { "name": "Software Architecture", "level": 4 },
       { "name": "Design Patterns", "level": 4 },
+      { "name": "SQL", "level": 3 },
+      { "name": "MongoDB", "level": 3 },
       { "name": "Live Streaming", "level": 3 }
     ]
   }
