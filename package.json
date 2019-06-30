@@ -44,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "pretty-quick staged && npm run sitemap"
+      "pre-commit": "pretty-quick staged"
     }
   }
 }

@@ -1,9 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
 
-// These routes are used by the sitemap generator and need to be kept 
+// These routes are used by the sitemap generator and need to be kept
 // in sync with the Root component that contains the actually used
-// route configuration. 
+// route configuration.
 
 export default (
   <Switch>
