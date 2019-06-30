@@ -1,9 +1,11 @@
 import React from "react";
+import Container from "react-bootstrap/Container";
 
 const NotFound = () => (
-  <div>
-    <h1>Page Not Found!</h1>
-  </div>
+  <Container>
+    <h1 className="display-1 text-center">Page Not Found!</h1>
+    <hr className="mt-3 mb-4" />
+  </Container>
 );
 
 export default NotFound;
