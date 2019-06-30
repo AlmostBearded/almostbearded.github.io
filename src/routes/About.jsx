@@ -85,11 +85,11 @@ const About = () => {
         </p>
       </Container>
       <hr className="my-4" />
-      <h2 className="display-4 text-center mb-4">Skills</h2>
+      <h2 className="display-2 text-center mb-4">Skills</h2>
       <Container className="text-center">
         {competencies.map(category => (
           <div key={category.name}>
-            <h5>{category.name}</h5>
+            <h4 className="display-4 text-center">{category.name}</h4>
             <div className="pb-5">
               <MultiColumnList
                 xs={12}
@@ -106,7 +106,7 @@ const About = () => {
       </Container>
 
       <hr className="my-4" />
-      <h2 className="display-4 text-center mb-4">Contact</h2>
+      <h2 className="display-2 text-center mb-4">Contact</h2>
       <Container className="mb-5">
         <ContactForm />
       </Container>
