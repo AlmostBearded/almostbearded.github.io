@@ -49,6 +49,8 @@
       { "name": "Design Patterns", "level": 4 },
       { "name": "SQL", "level": 3 },
       { "name": "MongoDB", "level": 3 },
+      { "name": "MySQL", "level": 3 },
+      { "name": "Android", "level": 2 },
       { "name": "Live Streaming", "level": 3 }
     ]
   }
