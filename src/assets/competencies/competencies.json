@@ -15,6 +15,8 @@
     "name": "Web Development",
     "competencies": [
       { "name": "React", "level": 4 },
+      { "name": "React Hooks", "level": 3 },
+      { "name": "MobX", "level": 3 },
       { "name": "AngularJS", "level": 3 },
       { "name": "Jest", "level": 3 },
       { "name": "Node.js", "level": 3 },
