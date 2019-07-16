@@ -16,11 +16,11 @@ const MultiColumnList = ({
     {items.map((item, index) => (
       <Col
         key={index}
-        {...xs && { xs: xs }}
-        {...sm && { sm: sm }}
-        {...md && { md: md }}
-        {...lg && { lg: lg }}
-        {...xl && { xl: xl }}
+        {...(xs && { xs: xs })}
+        {...(sm && { sm: sm })}
+        {...(md && { md: md })}
+        {...(lg && { lg: lg })}
+        {...(xl && { xl: xl })}
         className={`py-${paddingY}`}
       >
         {onRenderItem(item)}

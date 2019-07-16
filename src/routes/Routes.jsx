@@ -1,15 +1,15 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { mount, withView, lazy } from "navi";
+import MainLayout from "../common/MainLayout";
 
-// These routes are used by the sitemap generator and need to be kept
-// in sync with the Root component that contains the actually used
-// route configuration.
-
-export default (
-  <Switch>
-    <Route path="/" exact />
-    <Route path="/blog" />
-    <Route path="/portfolio" />
-    <Route path="/about" />
-  </Switch>
+const routes = withView(
+  () => <MainLayout />,
+  mount({
+    "/": lazy(() => import("./HomeRoute")),
+    "/about": lazy(() => import("./AboutRoute")),
+    "/blog": lazy(() => import("./BlogRoute")),
+    "/portfolio": lazy(() => import("./PortfolioRoute"))
+  })
 );
+
+export default routes;

@@ -3,15 +3,14 @@ import Container from "react-bootstrap/Container";
 import ProgressBar from "react-bootstrap/ProgressBar";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
-import Helmet from "react-helmet";
-import ContactForm from "../components/contact-form/ContactForm";
-import MultiColumnList from "../components/multi-column-list/MultiColumnList";
-import Content from "../assets/pages/about.md";
+import ContactForm from "./ContactForm";
+import MultiColumnList from "../common/MultiColumnList";
+import Content from "./AboutContent.mdx";
 import competencyLevels from "../assets/competencies/competencyLevels.json";
 import competencies from "../assets/competencies/competencies.json";
 import peter from "../assets/images/peter.webp";
 
-const About = () => {
+const AboutPage = () => {
   const renderCompetency = c => {
     const progress = 100 * (c.level / competencyLevels.length);
     return (
@@ -35,13 +34,6 @@ const About = () => {
 
   return (
     <Container>
-      <Helmet>
-        <title>About AlmostBearded</title>
-        <meta
-          name="description"
-          content="Details about Peter Oberrauner, his work, his background and how you can get in contact with him."
-        />
-      </Helmet>
       <h1 className="display-1 text-center">About Me</h1>
       <hr className="mt-3 mb-4" />
       <Container>
@@ -83,4 +75,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;
