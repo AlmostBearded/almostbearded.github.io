@@ -6,13 +6,13 @@ import type { Node } from "react";
 import type { BSColSize, BSSpacingSize } from "../common/BootstrapTypes.js";
 
 const MultiColumnList = ({
-  xs = 1,
+  xs,
   sm,
   md,
   lg,
   xl,
-  items = [],
-  onRenderItem = item => null,
+  items,
+  onRenderItem,
   paddingY = 2
 }: {
   xs?: BSColSize,

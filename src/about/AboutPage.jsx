@@ -60,7 +60,6 @@ const AboutPage = () => {
                 lg={1}
                 items={category.competencies.sort((a, b) => b.level - a.level)}
                 onRenderItem={renderCompetency}
-                paddingY={2}
               />
             </div>
           </div>
