@@ -1,6 +1,9 @@
+// @flow
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import type { Node } from "react";
+import type { BSColSize, BSSpacingSize } from "../common/BootstrapTypes.js";
 
 const MultiColumnList = ({
   xs = 1,
@@ -9,8 +12,17 @@ const MultiColumnList = ({
   lg,
   xl,
   items = [],
-  onRenderItem = item => {},
+  onRenderItem = item => null,
   paddingY = 2
+}: {
+  xs?: BSColSize,
+  sm?: BSColSize,
+  md?: BSColSize,
+  lg?: BSColSize,
+  xl?: BSColSize,
+  items: any[],
+  onRenderItem: any => Node,
+  paddingY?: BSSpacingSize
 }) => (
   <Row>
     {items.map((item, index) => (

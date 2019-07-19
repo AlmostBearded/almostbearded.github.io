@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import Container from "react-bootstrap/Container";
 import ProgressBar from "react-bootstrap/ProgressBar";
@@ -56,7 +57,7 @@ const AboutPage = () => {
                 xs={12}
                 sm={6}
                 md={4}
-                lg={3}
+                lg={1}
                 items={category.competencies.sort((a, b) => b.level - a.level)}
                 onRenderItem={renderCompetency}
                 paddingY={2}

@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import { mount, withView, lazy } from "navi";
 import MainLayout from "../common/MainLayout";

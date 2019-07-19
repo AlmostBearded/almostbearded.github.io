@@ -1,3 +1,4 @@
+// @flow
 import "babel-polyfill";
 import register from "navi-scripts/register";
 import React from "react";
@@ -35,13 +36,18 @@ register({
 
     // Start react, passing in the current navigation state and
     // rendering the top-level view.
+    let root = document.getElementById("root");
+    if (!root) {
+      console.error("Can't find root element. Aborting.");
+      return;
+    }
     renderer(
       <Router navigation={navigation}>
         <NotFoundBoundary render={() => <NotFoundPage />}>
           <View />
         </NotFoundBoundary>
       </Router>,
-      document.getElementById("root")
+      root
     );
 
     // If you want your app to work offline and load faster, you can change

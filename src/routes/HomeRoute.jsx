@@ -1,3 +1,4 @@
+// @flow
 import React from "react";
 import { route } from "navi";
 import HomePage from "../home/HomePage";
