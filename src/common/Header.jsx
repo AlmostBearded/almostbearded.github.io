@@ -4,18 +4,15 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import { Link } from "react-navi";
-import logo from "../assets/images/logo.png";
+import LogoImage from "./logo/LogoImage";
 
 const Header = () => (
   <Navbar bg="dark" variant="dark" expand="sm" collapseOnSelect>
     <Container>
       <Navbar.Brand>
-        <img
-          alt="Logo"
-          src={logo}
+        <LogoImage
           width="34"
           height="34"
-          style={{ imageRendering: "pixelated" }}
           className="d-inline-block align-top"
         />
         {" AlmostBearded"}

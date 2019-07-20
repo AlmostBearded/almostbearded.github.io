@@ -6,7 +6,7 @@ import MultiColumnList from "../common/MultiColumnList";
 import competencies from "./competencies/competencies.json";
 import Competency from "./competencies/Competency";
 import Content from "./AboutContent.mdx";
-import peter from "../assets/images/peter.webp";
+import peter from "./peter.webp";
 
 const AboutPage = () => {
   return (
