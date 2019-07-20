@@ -5,7 +5,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 import competencyLevels from "./competency-levels.json";
 
-const Competency = ({ level, name }) => {
+const Competency = ({ level, name }: { level: number, name: string }) => {
   const progress = 100 * (level / competencyLevels.length);
   return (
     <div>
