@@ -1,12 +1,15 @@
 // @flow
 import React from "react";
 import { View } from "react-navi";
+import Container from "react-bootstrap/Container";
 import Header from "./Header";
 
 const MainLayout = () => (
   <div>
     <Header />
-    <View />
+    <Container>
+      <View />
+    </Container>
   </div>
 );
 

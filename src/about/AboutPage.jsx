@@ -10,7 +10,7 @@ import peter from "../assets/images/peter.webp";
 
 const AboutPage = () => {
   return (
-    <Container>
+    <div>
       <h1 className="display-1 text-center">About Me</h1>
       <hr className="mt-3 mb-4" />
       <Container>
@@ -51,7 +51,7 @@ const AboutPage = () => {
       <Container className="mb-5">
         <ContactForm />
       </Container>
-    </Container>
+    </div>
   );
 };
 
