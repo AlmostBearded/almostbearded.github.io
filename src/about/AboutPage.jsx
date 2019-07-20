@@ -1,38 +1,14 @@
 // @flow
 import React from "react";
 import Container from "react-bootstrap/Container";
-import ProgressBar from "react-bootstrap/ProgressBar";
-import OverlayTrigger from "react-bootstrap/OverlayTrigger";
-import Tooltip from "react-bootstrap/Tooltip";
 import ContactForm from "./ContactForm";
 import MultiColumnList from "../common/MultiColumnList";
+import competencies from "./competencies/competencies.json";
+import Competency from "./competencies/Competency";
 import Content from "./AboutContent.mdx";
-import competencyLevels from "../assets/competencies/competencyLevels.json";
-import competencies from "../assets/competencies/competencies.json";
 import peter from "../assets/images/peter.webp";
 
 const AboutPage = () => {
-  const renderCompetency = c => {
-    const progress = 100 * (c.level / competencyLevels.length);
-    return (
-      <div>
-        <span>{c.name}</span>
-        <OverlayTrigger
-          placement="bottom"
-          overlay={<Tooltip>{competencyLevels[c.level - 1]}</Tooltip>}
-        >
-          <ProgressBar
-            now={progress}
-            label={competencyLevels[c.level - 1]}
-            variant="info"
-            srOnly
-            striped
-          />
-        </OverlayTrigger>
-      </div>
-    );
-  };
-
   return (
     <Container>
       <h1 className="display-1 text-center">About Me</h1>
@@ -58,8 +34,11 @@ const AboutPage = () => {
                 sm={6}
                 md={4}
                 lg={3}
-                items={category.competencies.sort((a, b) => b.level - a.level)}
-                onRenderItem={renderCompetency}
+                items={category.competencies
+                  .sort((a, b) => b.level - a.level)
+                  .map(v => (
+                    <Competency name={v.name} level={v.level} />
+                  ))}
                 paddingY={2}
               />
             </div>

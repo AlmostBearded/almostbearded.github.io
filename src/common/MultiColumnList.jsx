@@ -2,7 +2,6 @@
 import React from "react";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import type { Node } from "react";
 import type { BSColSize, BSSpacingSize } from "../common/BootstrapTypes.js";
 
 const MultiColumnList = ({
@@ -12,7 +11,6 @@ const MultiColumnList = ({
   lg,
   xl,
   items,
-  onRenderItem,
   paddingY = 2
 }: {
   xs?: BSColSize,
@@ -21,7 +19,6 @@ const MultiColumnList = ({
   lg?: BSColSize,
   xl?: BSColSize,
   items: any[],
-  onRenderItem: any => Node,
   paddingY?: BSSpacingSize
 }) => (
   <Row>
@@ -35,7 +32,7 @@ const MultiColumnList = ({
         {...(xl && { xl: xl })}
         className={`py-${paddingY}`}
       >
-        {onRenderItem(item)}
+        {item}
       </Col>
     ))}
   </Row>
