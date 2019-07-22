@@ -7,7 +7,7 @@ import Header from "./Header";
 const MainLayout = () => (
   <div>
     <Header />
-    <Container>
+    <Container className="pt-3">
       <View />
     </Container>
   </div>
