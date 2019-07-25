@@ -1,30 +1,24 @@
-The PIN Racer was the first project I worked on at [Rarebyte](http://rarebyte.com) back in 2016. It was a contract work for [Paysafecard](https://paysafecard.com) and it was played at their booth at [Gamescom](https://imgur.com/GQVlAs6) as well as other trade shows such as ESL and the Paris Games Week.
+import Figure from "react-bootstrap/Figure";
+import hoverboardFirst from "./hoverboard-first.gif";
+import hoverboardFinal from "./hoverboard-final.gif";
 
-This game is an online multiplayer competitive hoverboard racing game that is played with Wii balance boards. It was specifically designed to be played at trade fairs, which means each race is only about 2 minutes long to ensure that the queued people didn't have to wait for too long. We also added a separate spectator client which is used to show the current race with a cinematic camera setup. If no race is in progress the spectator shows a replay from the previous race to draw people to the booth.
+# Description
 
-<iframe
-  width="560"
-  height="315"
-  className="mx-auto d-block mt-3 mb-4"
-  src="https://www.youtube.com/embed/BFd97kR96Co"
-  frameBorder="0"
-  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-  allowFullScreen
-></iframe>
+The PIN Racer was the first project I worked on at [Rarebyte](http://rarebyte.com) back in 2016 and it was created with the Unity Engine in about 3 months. It was a contract work for [Paysafecard](https://paysafecard.com) and it was played at their booths at [Gamescom](https://imgur.com/GQVlAs6) as well as other trade shows such as ESL and the Paris Games Week.
 
-## Role
+This game is an online multiplayer competitive hoverboard racing game that is played with Wii balance boards. It was specifically designed to be played at trade fairs, which means each race is only about 2 minutes long to ensure that the queued people don't have to wait for too long before being able to play. We also added a separate spectator client which is used to show the current race with a cinematic camera setup. If no race is in progress the spectator shows a replay from the previous race to draw people to the booth.
 
-My main role on this project was the design and implementation of most of the gameplay code and the biggest challenge was the implementation of a control scheme that would assist players as much as possible without taking away too much control. The reason for such a design was that players would only have a few seconds to learn the game before the race would start and we wanted to eliminate the advantages of skilled players as much as possible. If you'd like to know how we did that, I did a [talk](https://www.youtube.com/watch?v=pTUyY-mtgI0) about this topic at the [Game Dev Days](http://gamedevdays.com/) in 2016.
+# Contributions
 
-## Features
+My main contribution to this project was the design and implementation of most of the gameplay code and the biggest challenge was the implementation of a control scheme that would assist players as much as possible without taking away too much control. The reason for such a design was that players would only have a few seconds to learn the game before the race would start and we wanted to eliminate the advantages of skilled players as much as possible. If you'd like to know how we did that and what iterations this system went through, I did a [talk](https://www.youtube.com/watch?v=pTUyY-mtgI0) about this topic at the [Game Dev Days](http://gamedevdays.com/) in 2016.
 
-- Up to 4-player local multiplayer
-- Played with Wii Balance Boards
-- Developed in Unity
-- Designed to be played at trade fairs
-- Spectator client with replay functionality to entertain the waiting audience
+<Figure className="w-50 p-2">
+  <Figure.Image alt="First Iteration of the Hoverboard" src={hoverboardFirst} className="w-100" />
+  <Figure.Caption className="text-center">First Iteration of the Hoverboard</Figure.Caption>
+</Figure>
+<Figure className="w-50 p-2 float-right">
+  <Figure.Image alt="Final Iteration of the Hoverboard" src={hoverboardFinal} className="w-100" />
+  <Figure.Caption className="text-center">Final Iteration of the Hoverboard</Figure.Caption>
+</Figure>
 
-## Technologies
-
-- Unity
-- C#
+Apart from the hoverboard implementation I also designed and implemented boost trails that are being left behind by players and that give others a speed boost when driving in them. The purpose of this mechanic is to give players that are farther behind a chance to catch up by driving in the lanes left behind by leading players and it quite successfully kept races very tight and exciting.
