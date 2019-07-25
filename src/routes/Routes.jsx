@@ -9,7 +9,7 @@ const routes = withView(
     "/": lazy(() => import("./HomeRoute")),
     "/about": lazy(() => import("./AboutRoute")),
     "/blog": lazy(() => import("./BlogRoute")),
-    "/portfolio": lazy(() => import("./PortfolioRoute"))
+    "/projects": lazy(() => import("./ProjectsRoute"))
   })
 );
 

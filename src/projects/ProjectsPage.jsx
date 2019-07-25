@@ -3,9 +3,9 @@ import React from "react";
 import { Link } from "react-navi";
 import pinRacer from "./pin-racer/project";
 
-const PortfolioPage = () => (
+const ProjectsPage = () => (
   <div>
-    <h1 className="display-1 text-center">Portfolio</h1>
+    <h1 className="display-1 text-center">Projects</h1>
     <hr className="mt-3 mb-4" />
     <Link href="./pin-racer">
       <img src={pinRacer.thumbnail} alt="paysafecard PIN Racer Thumbnail" />
@@ -13,4 +13,4 @@ const PortfolioPage = () => (
   </div>
 );
 
-export default PortfolioPage;
+export default ProjectsPage;
