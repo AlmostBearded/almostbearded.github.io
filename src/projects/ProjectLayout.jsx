@@ -1,7 +1,6 @@
 // @flow
 import React from "react";
 import { View } from "react-navi";
-import Jumbotron from "react-bootstrap/Jumbotron";
 import AspectContainer from "../common/AspectContainer";
 import Video from "../common/Video";
 
@@ -15,12 +14,11 @@ const ProjectLayout = ({
   trailer: string
 }) => (
   <div>
-    <Jumbotron>
-      <h1 className="display-1">{title}</h1>
-      <p className="lead">{tagline}</p>
-    </Jumbotron>
+    <h1 className="display-1 text-center">{title}</h1>
+    <p className="text-center lead">{tagline}</p>
+    <hr className="mt-3 mb-5" />
 
-    <div className="w-75 mx-auto mb-4">
+    <div className="w-75 mx-auto mb-5">
       <AspectContainer>
         <Video
           title={`${title} Trailer`}
