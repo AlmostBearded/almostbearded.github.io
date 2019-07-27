@@ -17,13 +17,7 @@ export default mount({
     view: <ProjectsPage />
   }),
   "/pin-racer": withView(
-    () => (
-      <ProjectLayout
-        title={pinRacer.title}
-        tagline={pinRacer.tagline}
-        trailer={pinRacer.trailer}
-      />
-    ),
+    () => <ProjectLayout title={pinRacer.title} tagline={pinRacer.tagline} />,
     route({
       title: pinRacer.title,
       head: <meta name="description" content={pinRacer.tagline} />,
