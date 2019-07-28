@@ -1,9 +1,9 @@
 import thumbnail from "./thumbnail.png";
 
 export default {
-  title: "PIN Racer",
+  title: "Seeds of Sol",
   tagline:
-    "A local multiplayer hoverboard racing game played with Wii Balance Boards.",
+    "An twin-stick shooter action roguelike featuring a multi-personality AI companion.",
   thumbnail: thumbnail,
   getContent: () => import("./content.mdx")
 };
