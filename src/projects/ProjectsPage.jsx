@@ -10,19 +10,40 @@ const ProjectsPage = () => (
     <h1 className="display-1 text-center">Projects</h1>
     <hr className="mt-3 mb-4" />
     <MultiColumnList
-      xs={1}
-      sm={2}
-      md={3}
+      xs={12}
+      sm={6}
+      md={4}
       items={[
-        <Link href="./pin-racer">
-          <img src={pinRacer.thumbnail} alt={`${pinRacer.title} Thumbnail`} />
-        </Link>,
-        <Link href="./seeds-of-sol">
-          <img
-            src={seedsOfSol.thumbnail}
-            alt={`${seedsOfSol.title} Thumbnail`}
-          />
-        </Link>
+        <div>
+          <Link href="./pin-racer">
+            <img
+              src={pinRacer.thumbnail}
+              alt={`${pinRacer.title} Thumbnail`}
+              className="w-100"
+            />
+          </Link>
+          <div className="px-1 pt-2">
+            <Link href="./seeds-of-sol">
+              <h4 className="text-dark">{pinRacer.title}</h4>
+            </Link>
+            <p className="text-muted">{pinRacer.tagline}</p>
+          </div>
+        </div>,
+        <div>
+          <Link href="./seeds-of-sol">
+            <img
+              src={seedsOfSol.thumbnail}
+              alt={`${seedsOfSol.title} Thumbnail`}
+              className="w-100"
+            />
+          </Link>
+          <div className="px-1 pt-2">
+            <Link href="./seeds-of-sol">
+              <h4 className="text-dark">{seedsOfSol.title}</h4>
+            </Link>
+            <p className="text-muted">{seedsOfSol.tagline}</p>
+          </div>
+        </div>
       ]}
     />
   </div>
