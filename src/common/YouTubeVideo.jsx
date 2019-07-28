@@ -1,16 +1,16 @@
 // @flow
 import React from "react";
 
-function Video({
+function YouTubeVideo({
   title,
-  url,
+  id,
   frameBorder = "0",
   allow = "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture",
   allowFullScreen = true,
   ...otherProps
 }: {
   title: string,
-  url: string,
+  id: string,
   frameBorder?: string,
   allow?: string,
   allowFullScreen?: boolean
@@ -18,7 +18,7 @@ function Video({
   return (
     <iframe
       title={title}
-      src={url}
+      src={`https://www.youtube.com/embed/${id}`}
       frameBorder={frameBorder}
       allow={allow}
       allowFullScreen={allowFullScreen}
@@ -27,4 +27,4 @@ function Video({
   );
 }
 
-export default Video;
+export default YouTubeVideo;
