@@ -1,8 +1,10 @@
 import Figure from "react-bootstrap/Figure";
 import AspectContainer from "../../common/AspectContainer";
 import YouTubeVideo from "../../common/YouTubeVideo";
-import weaponSystem1 from "./weapon-system-1.gif";
-import weaponSystem2 from "./weapon-system-2.gif";
+import positioning1 from "./positioning-1.gif";
+import positioning2 from "./positioning-2.gif";
+import spitters from "./spitters.gif";
+import guardian from "./guardian.gif";
 
 <div className="w-75 mx-auto mb-5">
   <AspectContainer>
@@ -24,35 +26,67 @@ Even though the development was very bumpy at times and I cursed the project on 
 
 # Contributions
 
-I was on the project from the start and, as the main programmer, I was heavily involved in the design and implementation of nearly all parts of the game.
+I was on the project from the start and, as the main programmer, I was heavily involved in the design and implementation of nearly all parts of the game. I already stopped working on this project a couple of years ago so the details below will only provide a rough overview over some of the things I did and can still remember.
 
 ## Dual-Wield Character Controller
 
-<Figure className="w-100">
-  <Figure.Image
-    alt="Shooting two pistols while stationary"
-    src={weaponSystem1}
-    className="w-50 p-2"
-  />
-  <Figure.Image
-    alt="Shooting two pistols while moving"
-    src={weaponSystem2}
-    className="w-50 p-2"
-  />
-  <Figure.Caption className="text-center">Shooting two pistols.</Figure.Caption>
-</Figure>
+I implemented a character controller including a special animator, inventory and weapon system that supported separate equipment slots for both hands. The player could either equip one or two single-handed weapons or one two-handed weapon at a time. When two weapons were equipped they could be fired separately which created interesting synergies and therefore allowed for the creation of compelling builds.
 
 ## AI Behaviors
 
+I was heavily involved in most enemy behaviors in this game. We used behavior trees to implement the behaviors of all of our enemies and it was my first experience working with this technology. It took some time to get used to the new programming paradigms but after a few days I got the hang of it and it was fairly easy to develop new behaviors from that point on. Initially, we used [Behavior Designer][bede] but we switched to [Node Canvas][noca] later on because it was very well integrated with [another asset][flca] we were using.
+
+<Figure className="w-50 p-2">
+  <Figure.Image alt="Spitters" src={spitters} className="w-100" />
+  <Figure.Caption className="text-center">Spitters</Figure.Caption>
+</Figure>
+
+<Figure className="w-50 p-2">
+  <Figure.Image alt="Guardian" src={guardian} className="w-100" />
+  <Figure.Caption className="text-center">Guardian</Figure.Caption>
+</Figure>
+
 ## Steering System
+
+The steering system was completely designed and developed by me and it is based on the math found [here][stbe]. The whole system consisted of a singular steering agent component that could be added to characters and that was used to control their movements.
+
+The implemented steering behaviors included:
+
+- Seek: Walk to a certain position
+- Flee: Flee from a certain position
+- Pursue: Pursue a moving target and try to intercept it
+- Evade: Evade a moving target
+
+All of the steering behaviors had integrated path following to keep agents on traversable terrain. I also implemented a very elaborate collision avoidance and agent separation system to prevent agents from running into dynamic obstacles or into each other.
 
 ## Positioning System
 
-## Dungeon Generation
+This system was used to find and evaluate viable positions for enemies around the player character. It consisted of a positioning system and multiple positioning agents. The positioning system kept track of all positions and whether they were valid or occupied. The agents consisted of various modules which were used to describe the desired positioning for specific agents. There were modules that weighed positions based on distance to the target, distance from the agent, distance from other agents and so on. These modules could for example be used to make enemies feel clever by surrounding the player while keeping their desired distances to them and it was very powerful in it's configuration capabilities.
 
-## Energy System
+<Figure className="w-50 p-2">
+  <Figure.Image
+    alt="Enemies surrounding the player"
+    src={positioning1}
+    className="w-100"
+  />
+  <Figure.Caption className="text-center">
+    Enemies surrounding the player.
+  </Figure.Caption>
+</Figure>
+
+<Figure className="w-50 p-2 float-right">
+  <Figure.Image
+    alt="Stress testing the positioning system"
+    src={positioning2}
+    className="w-100"
+  />
+  <Figure.Caption className="text-center">
+    Stress testing the positioning system.
+  </Figure.Caption>
+</Figure>
 
 [raby]: http://rarebyte.com
 [bede]: https://assetstore.unity.com/packages/tools/visual-scripting/behavior-designer-behavior-trees-for-everyone-15277
 [flca]: https://assetstore.unity.com/packages/tools/visual-scripting/flowcanvas-33903
 [noca]: https://assetstore.unity.com/packages/tools/visual-scripting/nodecanvas-14914
+[stbe]: https://gamedevelopment.tutsplus.com/series/understanding-steering-behaviors--gamedev-12732
