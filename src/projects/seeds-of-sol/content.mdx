@@ -1,3 +1,6 @@
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import Figure from "../../common/Figure";
 import AspectContainer from "../../common/AspectContainer";
 import YouTubeVideo from "../../common/YouTubeVideo";
@@ -36,8 +39,16 @@ I implemented a character controller including a special animator, inventory and
 
 I was heavily involved in most enemy behaviors in this game. We used behavior trees to implement the behaviors of all of our enemies and it was my first experience working with this technology. It took some time to get used to the new programming paradigms but after a few days I got the hang of it and it was fairly easy to develop new behaviors from that point on. Initially, we used [Behavior Designer][bede] but we switched to [Node Canvas][noca] later on because it was very well integrated with [another asset][flca] we were using.
 
-<Figure src={spitters} caption="Spitters" className="w-50 p-2" />
-<Figure src={guardian} caption="Guardian" className="w-50 p-2" />
+<Container>
+  <Row>
+    <Col xs="12" md="6">
+      <Figure src={spitters} caption="Spitters" />
+    </Col>
+    <Col xs="12" md="6">
+      <Figure src={guardian} caption="Guardian" />
+    </Col>
+  </Row>
+</Container>
 
 ## Steering System
 
@@ -56,8 +67,19 @@ All of the steering behaviors had integrated path following to keep agents on tr
 
 This system was used to find and evaluate viable positions for enemies around the player character. It consisted of a positioning system and multiple positioning agents. The positioning system kept track of all positions and whether they were valid or occupied. The agents consisted of various modules which were used to describe the desired positioning for specific agents. There were modules that weighed positions based on distance to the target, distance from the agent, distance from other agents and so on. These modules could for example be used to make enemies feel clever by surrounding the player while keeping their desired distances to them and it was very powerful in it's configuration capabilities.
 
-<Figure src={positioning1} caption="Enemies surrounding the player" className="w-50 p-2" />
-<Figure src={positioning2} caption="Stress testing the positioning system" className="w-50 p-2 float-right" />
+<Container>
+  <Row>
+    <Col xs="12" md="6">
+      <Figure src={positioning1} caption="Enemies surrounding the player" />
+    </Col>
+    <Col xs="12" md="6">
+      <Figure
+        src={positioning2}
+        caption="Stress testing the positioning system"
+      />
+    </Col>
+  </Row>
+</Container>
 
 [raby]: http://rarebyte.com
 [bede]: https://assetstore.unity.com/packages/tools/visual-scripting/behavior-designer-behavior-trees-for-everyone-15277
