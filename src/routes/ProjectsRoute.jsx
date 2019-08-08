@@ -5,6 +5,7 @@ import ProjectsPage from "../projects/ProjectsPage";
 import ProjectLayout from "../projects/ProjectLayout";
 import pinRacer from "../projects/pin-racer/project";
 import seedsOfSol from "../projects/seeds-of-sol/project";
+import battlegrounds from "../projects/battlegrounds/project";
 
 export default mount({
   "/": route({
@@ -33,6 +34,19 @@ export default mount({
       title: seedsOfSol.title,
       head: <meta name="description" content={seedsOfSol.tagline} />,
       getView: seedsOfSol.getContent
+    })
+  ),
+  "/battlegrounds": withView(
+    () => (
+      <ProjectLayout
+        title={battlegrounds.title}
+        tagline={battlegrounds.tagline}
+      />
+    ),
+    route({
+      title: battlegrounds.title,
+      head: <meta name="description" content={battlegrounds.tagline} />,
+      getView: battlegrounds.getContent
     })
   )
 });
