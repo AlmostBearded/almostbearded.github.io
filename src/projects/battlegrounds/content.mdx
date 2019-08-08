@@ -10,10 +10,42 @@ import birmingham from "./birmingham.jpg";
   <Figure src={game} caption="Standard level with 3 players" />
 </Container>
 
-<Container>
-  <Figure src={lobby} caption="Lobby with 4 players" />
-</Container>
+# Description
+
+This was a project I worked on at [Rarebyte][raby] in 2018 for about 3 months. It was a game developed for [paysafecard][paca] to be exhibited at their booths at various events like [gamescom][gaco] and the [ESL One][eson]. We used the [Unity][unit] game engine and programmed the whole game in C# while also heavily employing the [Zenject][zenj] dependency injection library to provide an efficient softare architecture to make iterating as easy as possible.
+
+The game is an up to 4 player local multiplayer battle royale game where every player controls a tank and tries to take out the other players while not getting destroyed themselves. The level design and movement mechanics take heavy inspiration from Pacman but we added further elements like player health, shooting and shields. You can destroy other players by hitting them with rockets while they're not shielded and both power-ups are on cooldowns so you'll have to pick them up strategically to not waste them. If all power-ups are used the players have to collect all the glowing dots to make new power-ups appear. There are also constantly respawning AI-based enemies that have to be avoided and that can be destroyed with rockets.
 
 <Container>
   <Figure src={birmingham} caption="Setup at ESL One Birmingham 2019" />
 </Container>
+
+# Contribution
+
+I was responsible for the internal project management and programming on this project. I planned and executed our scrum sprints, delegated work to game designers and artists and organized playtesting sessions. As the programmer I also implemented the tools and systems to allow the artists and designers to work as hassle free as possible.
+
+I'm a firm believer in clean code and this project gave me the opportunity to fully embrace the concept of dependency injection and experiment with the [Zenject][zenj] library. It took only a short period of learning and setting everything up to get used to the new coding patterns and I can say with confidence that it is absolutely worth it. Having a well designed software architecture is an invaluable thing to have when you need to iterate fast and often which is a requirement I find myself facing in almost every project.
+
+Among the things I implemented are:
+
+- The grid on which the levels were built
+- Input handling
+- Player & AI movement including collision detection
+- Collectibles (Rockets, Shields, Dots)
+- Combat using rockets and shields
+- Level wrapping
+- Effect system to trigger effects and manage their lifecycles
+- A lobby where players can join the game
+
+I was also heavily involved in the design process and am very proud about how this game turned out to be. It was fairly well received and the whole project was completed without any major issues. The well-designed architecture we achieved through the [Zenject][zenj] framework also resulted in easy to read code which led to unproblematic onboarding of additional programmers in the final weeks before the deadline and to less bugs in general.
+
+<Container>
+  <Figure src={lobby} caption="Lobby with 4 players" />
+</Container>
+
+[paca]: https://www.paysafecard.com
+[raby]: http://wwww.rarebyte.com
+[gaco]: https://www.gamescom.global/
+[eson]: https://www.esl-one.com
+[unit]: https://unity.com/
+[zenj]: https://assetstore.unity.com/packages/tools/integration/zenject-dependency-injection-ioc-17758
