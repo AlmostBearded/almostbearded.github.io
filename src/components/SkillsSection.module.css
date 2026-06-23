@@ -1,0 +1,10 @@
+.skillsGrid {
+  column-count: 2;
+  column-gap: 1.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .skillsGrid {
+    column-count: 1;
+  }
+}
