@@ -9,7 +9,7 @@ function findSlots<T extends Record<string, React.ElementType>>(
   slots: T,
 ): { [K in keyof T]?: ReactElement } & { rest: ReactNode[] } {
   const items = Children.toArray(children)
-  const result = {} as { [K in keyof T]?: ReactElement } & { rest: ReactNode[] }
+  const result: { [K in keyof T]?: ReactElement } = {}
   const keys = Object.keys(slots) as (keyof T)[]
   const used = new Set<number>()
 
@@ -22,9 +22,9 @@ function findSlots<T extends Record<string, React.ElementType>>(
     }
   }
 
-  result.rest = items.filter((_, i) => !used.has(i))
+  const rest = items.filter((_, i) => !used.has(i))
 
-  return result
+  return { ...result, rest }
 }
 
 export default findSlots
