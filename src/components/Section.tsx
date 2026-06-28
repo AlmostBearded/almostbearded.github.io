@@ -1,4 +1,4 @@
-import { createContext, useContext, type HTMLAttributes, type ReactNode } from 'react'
+import { ComponentProps, createContext, useContext, type HTMLAttributes, type ReactNode } from 'react'
 import styles from './Section.module.css'
 import _Heading from './Heading'
 import findSlots from '../utils/findSlots'
@@ -19,12 +19,12 @@ function Section({ className, children, ...rest }: HTMLAttributes<HTMLElement>) 
   )
 }
 
-function Heading({ className, children, ...rest }: HTMLAttributes<HTMLHeadingElement>) {
+function Heading({ children, ...rest }: Partial<ComponentProps<typeof _Heading>>) {
   const { level } = useContext(SectionContext)
   const clamped = Math.min(level, 3) as 1 | 2 | 3
 
   return (
-    <_Heading level={clamped} className={className} {...rest}>
+    <_Heading level={clamped} {...rest}>
       {children}
     </_Heading>
   )
