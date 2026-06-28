@@ -15,13 +15,13 @@
 
 @container (min-width: 600px) {
   .columns {
-    column-count: var(--column-count-md, var(--column-count-sm));
+    column-count: var(--column-count-md, var(--column-count-sm, var(--column-count-base, 1)));
   }
 }
 
 @container (min-width: 900px) {
   .columns {
-    column-count: var(--column-count-lg, var(--column-count-md));
+    column-count: var(--column-count-lg, var(--column-count-md, var(--column-count-sm, var(--column-count-base, 1))));
   }
 }
 
