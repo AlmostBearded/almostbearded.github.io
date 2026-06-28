@@ -1,7 +1,7 @@
 import type { SkillCategory } from '../data'
-import styles from './SkillsSection.module.css'
 import InlineList from './InlineList'
 import Section from './Section'
+import Columns from './Columns'
 
 interface SkillsSectionProps {
   skills: SkillCategory[]
@@ -12,7 +12,7 @@ function SkillsSection({ skills }: SkillsSectionProps) {
     <Section>
       <Section.Heading>Skills</Section.Heading>
       <Section.Content>
-        <div className={styles.skillsGrid}>
+        <Columns columnCount={{md: 2}}>
           {skills.map((group) => (
             <Section key={group.category}>
               <Section.Heading>{group.category}</Section.Heading>
@@ -25,10 +25,11 @@ function SkillsSection({ skills }: SkillsSectionProps) {
               </Section.Content>
             </Section>
           ))}
-        </div>
+        </Columns>
       </Section.Content>
     </Section>
   )
 }
 
 export default SkillsSection
+  
