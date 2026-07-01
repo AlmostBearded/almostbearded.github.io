@@ -1,7 +1,7 @@
 import type { Experience as ExperienceData } from '../data'
 import Section from './Section'
-import Text from './Text'
 import Highlights from './Highlights'
+import Paragraph from './Paragraph'
 
 interface ExperienceSectionProps {
   items: ExperienceData[]
@@ -19,7 +19,7 @@ function ExperienceSection({ items }: ExperienceSectionProps) {
               <Section.Heading.Subheading>{exp.institution} · {exp.period}</Section.Heading.Subheading>
             </Section.Heading>
             <Section.Content>
-              <Text as='p' color='muted'>{exp.summary}</Text>
+              <Paragraph color='muted'>{exp.summary}</Paragraph>
               <Highlights items={exp.highlights} />
             </Section.Content>
           </Section>

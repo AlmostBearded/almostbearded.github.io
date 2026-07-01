@@ -1,7 +1,7 @@
 import type { Education as EducationData } from '../data'
 import Section from './Section'
-import Text from './Text'
 import Highlights from './Highlights'
+import Paragraph from './Paragraph'
 
 interface EducationSectionProps {
   items: EducationData[]
@@ -19,7 +19,7 @@ function EducationSection({ items }: EducationSectionProps) {
               <Section.Heading.Subheading>{edu.institution} · {edu.period}</Section.Heading.Subheading>
             </Section.Heading>
             <Section.Content>
-              {edu.degree && <Text as='p' color='muted'>{edu.degree}</Text>}
+              {edu.degree && <Paragraph color='muted'>{edu.degree}</Paragraph>}
               <Highlights items={edu.highlights} />
             </Section.Content>
           </Section>
