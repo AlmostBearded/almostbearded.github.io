@@ -1,5 +1,4 @@
 import { HTMLAttributes } from "react"
-import styles from './Columns.module.css'
 
 interface ColumnsProps extends HTMLAttributes<HTMLDivElement> {
   columnWidth?: string
@@ -9,7 +8,7 @@ interface ColumnsProps extends HTMLAttributes<HTMLDivElement> {
 function Columns({columnWidth, className, style, children, ...rest}: ColumnsProps) {
   return (
     <div
-      className={styles.columns}
+      className={className}
       style={{ columnWidth, ...style }}
       {...rest}
     >
