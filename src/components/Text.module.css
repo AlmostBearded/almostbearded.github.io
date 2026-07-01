@@ -9,3 +9,7 @@
 .accent {
   color: var(--color-accent);
 }
+
+.paragraph {
+  margin-bottom: 0.25rem;
+}
