@@ -1,7 +1,7 @@
-import styles from './Highlights.module.css'
 import type { Highlight } from '../data'
 import Link from './Link'
 import Text from './Text'
+import UnorderedList from './UnorderedList'
 
 interface HighlightsProps {
   items: Highlight[]
@@ -10,20 +10,20 @@ interface HighlightsProps {
 function Highlights({ items }: HighlightsProps) {
   if (items.length === 0) return null
   return (
-    <ul className={styles.highlights}>
+    <UnorderedList>
       {items.map((h) => (
-        <li key={h.title}>
+        <UnorderedList.Item key={h.title}>
           {h.url ? (
             <Link href={h.url}>
-              <Text weight="bold">{h.title}</Text>
+              <Text weight="bold" color="muted">{h.title}</Text>
             </Link>
           ) : (
-            <Text weight="bold">{h.title}</Text>
+            <Text weight="bold" color="muted">{h.title}</Text>
           )}
-          {h.summary && <Text>: {h.summary}</Text>}
-        </li>
+          {h.summary && <Text color="muted">: {h.summary}</Text>}
+        </UnorderedList.Item>
       ))}
-    </ul>
+    </UnorderedList>
   )
 }
 
