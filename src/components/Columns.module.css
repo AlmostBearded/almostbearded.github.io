@@ -1,27 +1,3 @@
-.container {
-  container-type: inline-size;
-  width: 100%;
-}
-
 .columns {
-  column-count: var(--column-count-base, 1);
+  column-width: var(--column-width, auto);
 }
-
-@container (min-width: 300px) {
-  .columns {
-    column-count: var(--column-count-sm, var(--column-count-base));
-  }
-}
-
-@container (min-width: 600px) {
-  .columns {
-    column-count: var(--column-count-md, var(--column-count-sm, var(--column-count-base, 1)));
-  }
-}
-
-@container (min-width: 900px) {
-  .columns {
-    column-count: var(--column-count-lg, var(--column-count-md, var(--column-count-sm, var(--column-count-base, 1))));
-  }
-}
-

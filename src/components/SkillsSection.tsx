@@ -12,7 +12,7 @@ function SkillsSection({ skills }: SkillsSectionProps) {
     <Section>
       <Section.Heading>Skills</Section.Heading>
       <Section.Content>
-        <Columns columnCount={{md: 2}}>
+        <Columns columnWidth="20rem">
           {skills.map((group) => (
             <Section key={group.category}>
               <Section.Heading>{group.category}</Section.Heading>
