@@ -149,8 +149,32 @@ export const cvData: CvData = {
       institution: "Rarebyte, Graz",
       period: "June 2016 – February 2019",
       summary:
-        "Worked as a lead engineer with designers and artists on various internal and external game projects.",
-      highlights: [],
+        "Lead engineer on internal and client game projects, working in small cross-functional teams with designers, artists, and external contractors.",
+      highlights: [
+        {
+          title: "Seeds of Sol",
+          summary: "Main software engineer on an action-adventure with roguelike elements. Developed procedural world generation, player/animation controller, enemy behavior, and most core gameplay systems over ~2 years. Streamed development on Twitch to build community around the project.",
+          url: "https://www.youtube.com/watch?v=NRUAHY6Ju0k",
+        },
+        {
+          title: "Paysafecard PIN Racer",
+          summary: "Built a Wii Balance Board-based multiplayer racing game that was played by large crowds at Gamescom as part of Paysafecard's booth.",
+          url: "https://www.youtube.com/watch?v=BFd97kR96Co",
+        },
+        {
+          title: "PIN Racer Development Talk",
+          summary: "Delivered a talk at the Game Dev Days Graz conference covering the technical development and unique input challenges of PIN Racer.",
+          url: "https://www.youtube.com/watch?v=pTUyY-mtgI0",
+        },
+        {
+          title: "Paysafecard Tank Game",
+          summary: "Built a Pacman-inspired multiplayer tank fighting game with powerups, played by large crowds at Gamescom as part of Paysafecard's booth.",
+        },
+        {
+          title: "Game Dev Tycoon Port",
+          summary: "Helped port the popular simulation game to mobile and Nintendo Switch.",
+        },
+      ],
     },
     {
       role: "Board Member",
