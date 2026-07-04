@@ -128,8 +128,21 @@ export const cvData: CvData = {
       institution: "CodeFlügel, Graz",
       period: "February 2019 – February 2020",
       summary:
-        "Drove the implementation of specialized frontend applications and 3D visualizations using a broad range of technologies, and dealt with customers to derive technical requirements that deliver solutions fitting their individual needs.",
-      highlights: [],
+        "Worked across a variety of client projects as the primary developer, building frontend applications and 3D visualizations end-to-end.",
+      highlights: [
+        {
+          title: "Real Estate & Property Management Portals",
+          summary: "Built a bulletin-board application for apartment complex lobbies using HTML, JS, CSS, and Pug, and a contract management system for a real estate developer using React.",
+        },
+        {
+          title: "Smart Meter Interactive Manual",
+          summary: "Developed a React-based interactive manual for smart electricity meters for a major Austrian utility provider.",
+        },
+        {
+          title: "Museum Interactive 3D Visualizations",
+          summary: "Created interactive 3D exhibits for a children's museum using the Unity game engine.",
+        },
+      ],
     },
     {
       role: "Game Programmer",
