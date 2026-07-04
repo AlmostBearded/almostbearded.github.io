@@ -48,7 +48,7 @@ export const cvData: CvData = {
   linkedin: "https://www.linkedin.com/in/peter-oberrauner-b62896129",
   github: "https://github.com/AlmostBearded",
   profile:
-    "Senior Software Engineer with a passion for software design, code quality, and developer experience. Experienced across the full stack (from React frontends to backend services and API design) with a strong focus on architecting maintainable, testable systems. Track record of technical leadership, coaching engineers, and establishing development conventions, testing guidelines, and AI-augmented workflows that improve team effectiveness. Also brings product ownership experience, bridging business priorities with technical delivery.",
+    "Senior Software Engineer with a track record of architecting and delivering platform-scale products serving thousands of internal users and customers. Drives technical direction across teams, establishes engineering standards, and elevates team effectiveness through coaching and AI-augmented workflows. Also brings 2 years of product ownership experience aligning technical delivery with business priorities.",
   skills: [
     {
       category: "Frontend",
