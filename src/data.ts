@@ -87,39 +87,39 @@ export const cvData: CvData = {
       institution: "Dynatrace, Klagenfurt",
       period: "May 2021 – Present",
       summary:
-        "Senior Software Engineer on the Dynatrace Platform, driving technical design, tooling, and engineering culture across multiple teams. Also served as Product Owner for ~2 years.",
+        "Senior Software Engineer on the Dynatrace Platform, driving technical design, architecture, and engineering culture across multiple teams. Also served as Product Owner for ~2 years.",
       highlights: [
         {
           title: "Feature Management",
-          summary: "Contributed to the development of an OpenFeature-based product, covering the management application and service.",
+          summary: "Contributed to an OpenFeature-based feature management product serving 2,000+ internal users across R&D teams, managing feature flags for frontend applications and backend services.",
         },
         {
           title: "Platform Search",
-          summary: "Main contributor for the app shell integration of the search UI and the platform cluster integration of the backend. Drove the integration of various heterogeneous data sources and ensured long-term maintainability and stability through the development of a cross-data-source integration framework and rigorous quality standards and testing requirements.",
+          summary: "Main contributor for search UI and backend. Led integration of 9+ heterogeneous data sources into a unified search experience and developed a cross-data-source integration framework that reduced new source onboarding from weeks to days. Highly used feature with thousands of daily active users.",
         },
         {
           title: "App Shell",
-          summary: "Developed core platform UI components including the Dock and intent/routing mechanisms.",
+          summary: "Contributed to core platform UI components such as the Dock and intent/routing mechanisms used across the Dynatrace Platform.",
         },
         {
           title: "SDK Generator",
-          summary: "Built the foundation and prototype of an OpenAPI-based SDK generator used to generate client SDKs for multiple programming languages.",
+          summary: "Architected and prototyped an OpenAPI-based SDK generator producing TypeScript and Java API clients, auto-generating client libraries for numerous internal APIs.",
         },
         {
           title: "Technical Leadership",
-          summary: "Broke down requirements into workable tasks, planned and executed delivery, and oversaw cross-team contributions.",
+          summary: "Led a cross-functional team of 4–6 engineers, breaking down requirements, planning delivery, and overseeing cross-team contributions to deliver platform-scale products.",
         },
         {
           title: "Technical Coaching & Mentoring",
-          summary: "Coached multiple engineers inside and outside the team on React, software design, testing strategies, and code quality. Ran internal tech talks on SOLID principles in React, agile team processes, postmortems of significant refactorings, and testing strategy workshops.",
+          summary: "Coached engineers inside and outside the team on React, software design, testing strategies, and code quality. Delivered well-received internal tech talks and workshops on SOLID principles in React, testing strategy, and large-scale refactoring.",
         },
         {
           title: "Process & Quality",
-          summary: "Served as Agile Advocate, refining development processes, establishing Kanban workflows, coding conventions, testing guidelines, and AI agent configurations to boost team productivity.",
+          summary: "Served as Agile Advocate, establishing coding conventions, testing guidelines, and AI agent configurations to boost team productivity and engineering consistency.",
         },
         {
           title: "Product Ownership",
-          summary: "Served as Product Owner for the Platform Search team (2022–2024), handling stakeholder communication, backlog refinement, prioritization, and forecasting delivery milestones.",
+          summary: "Served as Product Owner for the Platform Search team (2022–2024), leading a team of 4–6 engineers and aligning with PMs, product architects, and stakeholders to prioritize and deliver against business goals.",
         },
       ],
     },
