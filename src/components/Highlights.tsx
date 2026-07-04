@@ -15,7 +15,7 @@ function Highlights({ items }: HighlightsProps) {
         <UnorderedList.Item key={h.title}>
           {h.url ? (
             <Link href={h.url}>
-              <Text weight="bold" color="muted">{h.title}</Text>
+              <Text weight="bold">{h.title}</Text>
             </Link>
           ) : (
             <Text weight="bold" color="muted">{h.title}</Text>

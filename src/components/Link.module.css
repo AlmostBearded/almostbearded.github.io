@@ -2,3 +2,10 @@
   color: var(--color-accent);
   text-decoration: none;
 }
+
+@media print {
+  .link {
+    color: inherit;
+    text-decoration: none;
+  }
+}
