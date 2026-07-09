@@ -157,6 +157,10 @@ export const cvData: CvData = {
           url: "https://www.youtube.com/watch?v=NRUAHY6Ju0k",
         },
         {
+          title: "Community Building",
+          summary: "Streamed Seeds of Sol development live on Twitch, building an engaged community around the project with consistently strong viewership. Posted dev diary updates on Twitter to grow the audience around the project.",
+        },
+        {
           title: "Paysafecard PIN Racer",
           summary: "Built a Wii Balance Board-based multiplayer racing game that was played by large crowds at Gamescom as part of Paysafecard's booth.",
           url: "https://www.youtube.com/watch?v=BFd97kR96Co",
